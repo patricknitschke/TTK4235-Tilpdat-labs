@@ -1,9 +1,13 @@
 #include "elevator.h"
+#include <unistd.h>
 
 
 struct Elevator elevator;
 
 int start(void){
+    for( int i = 0; i<6 ; i++){
+        pop_queue(i);
+    }
     int floor = elev_get_floor_sensor_signal();
     //motor_dir already set direction up from main() 
         
@@ -12,14 +16,16 @@ int start(void){
     }
 
     elev_set_motor_direction(DIRN_STOP);
-    elevator.dir = DIRN_STOP;    
+    elevator.dir = DIRN_STOP;
     set_elevator();
     return floor;
     
 }
 
 void set_elevator(){
-    elevator.floor = elev_get_floor_sensor_signal();
+    if (elev_get_floor_sensor_signal() != -1) {
+        elevator.floor = elev_get_floor_sensor_signal();
+    }
     if (elevator.floor != -1){
         elevator.valid_position = true;
     }
@@ -28,11 +34,30 @@ void set_elevator(){
     }
 }
 
+void setDirection(elev_motor_direction_t dir){
+    elevator.dir = dir;
+}
+
 
 void elevator_rest(){
-    //checks if queue if empty. If so -> stop and rest.
+    if (check_empty_queue()){
+        elev_set_motor_direction(DIRN_STOP);
+    }
 }
 
 struct Elevator* getElevator() {
     return &elevator;
+}
+
+void station_stop(elev_motor_direction_t direction){
+    elev_set_motor_direction(DIRN_STOP);
+}
+
+void floor_light_set(){
+}
+
+
+
+elev_motor_direction_t getDirection(){
+    return elevator.dir;
 }

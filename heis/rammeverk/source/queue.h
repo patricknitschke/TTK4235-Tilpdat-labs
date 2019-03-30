@@ -12,14 +12,17 @@ enum floor_name{ONE_UP,TWO_DOWN,TWO_UP,THREE_DOWN,THREE_UP,FOUR_DOWN};
 
 struct Queue{
     int queue[6];
-    int empty_queue;
 };
 
 void set_queue(int floor);
 struct Queue* get_queue();
 void pop_queue(int floor);
 
-void listen(void);
+int listen();
+void stop_n_kill_button();
+void set_target(int floor);
+bool check_empty_queue();
+
 
 
 

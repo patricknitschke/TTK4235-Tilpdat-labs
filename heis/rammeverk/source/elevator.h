@@ -20,8 +20,10 @@ struct Elevator{
 // Elevator functions
 int start(void);
 void set_elevator();
+void setDirection(elev_motor_direction_t dir);
 void elevator_rest();
-
+void station_stop(elev_motor_direction_t direction);
+elev_motor_direction_t getDirection();
 struct Elevator* getElevator();
 
 
