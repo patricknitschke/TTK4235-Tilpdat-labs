@@ -1,8 +1,8 @@
 #ifndef ELEVATOR_H
 #define ELEVATOR_H
-#include "elev.h"
-#include "channels.h"
-#include "io.h"
+#include "driver/elev.h"
+#include "driver/channels.h"
+#include "driver/io.h"
 #include "queue.h"
 
 
