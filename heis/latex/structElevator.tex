@@ -1,0 +1,49 @@
+\hypertarget{structElevator}{}\section{Elevator Struct Reference}
+\label{structElevator}\index{Elevator@{Elevator}}
+
+
+A struct that holds information regarding the elevator\textquotesingle{}s position and direction.  
+
+
+
+
+{\ttfamily \#include $<$elevator.\+h$>$}
+
+\subsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structElevator_a7cb6a37b507eed9b1b34c5e0899c9936}\label{structElevator_a7cb6a37b507eed9b1b34c5e0899c9936}} 
+int {\bfseries floor}
+\item 
+\mbox{\Hypertarget{structElevator_ae09fec6b6f6f98cf4e84a2699b4494ef}\label{structElevator_ae09fec6b6f6f98cf4e84a2699b4494ef}} 
+\mbox{\hyperlink{elev_8h_a2256dfd58fecce253106f83fd2ed607f}{elev\+\_\+motor\+\_\+direction\+\_\+t}} {\bfseries dir}
+\item 
+\mbox{\Hypertarget{structElevator_a4764a4c4bb8b2e7ea4030c7e0f695537}\label{structElevator_a4764a4c4bb8b2e7ea4030c7e0f695537}} 
+\mbox{\hyperlink{elev_8h_a2256dfd58fecce253106f83fd2ed607f}{elev\+\_\+motor\+\_\+direction\+\_\+t}} {\bfseries dir\+\_\+previous}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+A struct that holds information regarding the elevator\textquotesingle{}s position and direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em floor} & Current or last registered floor of the elevator. \\
+\hline
+{\em dir} & Current direction of the elevator. \\
+\hline
+{\em dir\+\_\+previous} & Remembers the previous direction of the elevator before it stops.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+dir\+\_\+previous is never set to D\+I\+R\+N\+\_\+\+S\+T\+OP. 
+\end{DoxyNote}
+
+
+Definition at line 24 of file elevator.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+source/\mbox{\hyperlink{elevator_8h}{elevator.\+h}}\end{DoxyCompactItemize}

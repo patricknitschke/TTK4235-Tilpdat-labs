@@ -1,0 +1,4 @@
+
+[submodule "heis/heislabben-TTK4235"]
+	path = heis/heislabben-TTK4235
+	url = https://github.com/patricknitschke/heislabben-TTK4235
